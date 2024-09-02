@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const environment = require('./config/environment');
-const uploadRoutes = require('./routes/uploadRoutes');
+
 const verifyRoutes = require('./routes/verifyRoutes');
 const errorHandler = require('./middlewares/errorHandler');
-const fileUtils = require('./utils/fileUtils');
+
 const cors = require('cors');
 
 app.use(
