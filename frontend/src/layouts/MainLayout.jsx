@@ -11,15 +11,22 @@ const MainLayout = () => {
         </div>
       </header>
 
-      <main className="flex-grow container mx-auto p-4">
+      <main className="flex-grow pb-20">
         <Outlet />
-      </main>
-      <div>
         <ScrollableLedger />
-      </div>
-      <footer className="bg-gray-800 text-white p-4 mt-auto">
+      </main>
+      <footer className="bg-gray-800 text-white p-4 fixed bottom-0 left-0 w-full">
         <div className="container mx-auto text-center">
           <p>
+            <a
+              className="text-lime-300 hover:underline"
+              href="https://dhaliwal.dev"
+              target="_blank"
+              rel="noreferrer"
+            >
+              dhaliwal-h
+            </a>
+            <> </>
             &copy; {new Date().getFullYear()} Content Verification System. All
             rights reserved.
           </p>
