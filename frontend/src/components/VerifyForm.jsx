@@ -86,7 +86,7 @@ const VerifyForm = () => {
         </button>
       </form>
       {verificationResult && (
-        <p className="{{ error ? 'text-red-600' : 'text-green-600' }}">
+        <p className={error ? 'text-red-600' : 'text-green-600'}>
           {verificationResult}
         </p>
       )}
