@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+import Toast from './Toast';
 
 const people = [
   // static for now but will be fetched from the public database in the future
@@ -13,10 +15,12 @@ const people = [
 ];
 
 const ScrollableLedger = () => {
+  const [showToast, setShowToast] = useState(false);
+
   const copyToClipboard = (text) => {
     navigator.clipboard
       .writeText(text)
-      .then(() => alert('Public key copied to clipboard!'))
+      .then(() => setShowToast(true))
       .catch((err) => console.error('Failed to copy text: ', err));
   };
 
@@ -34,6 +38,12 @@ const ScrollableLedger = () => {
               >
                 {person.publicKey}
               </span>
+              {showToast && (
+                <Toast
+                  message="Public key copied to clipboard!"
+                  onClose={() => setShowToast(false)}
+                />
+              )}
             </li>
           ))}
         </ul>
