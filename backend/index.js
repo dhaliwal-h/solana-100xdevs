@@ -7,11 +7,6 @@ const errorHandler = require('./middlewares/errorHandler');
 
 const cors = require('cors');
 
-app.use(
-  cors({
-    origin: '*',
-  })
-);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,7 +15,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/verify', verifyRoutes);
+app.use('/api/verify', verifyRoutes);
 
 app.use(errorHandler);
 
