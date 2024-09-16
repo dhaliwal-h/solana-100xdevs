@@ -8,6 +8,24 @@ const MainLayout = () => {
       <header className="bg-gray-800 text-white p-4">
         <div className="container mx-auto">
           <h1 className="text-2xl font-bold">Content Verification System</h1>
+          {/* nodtion link for doc */}
+          <a
+            href="https://atlantic-orangutan-78d.notion.site/Content-Verification-System-0e899fb1b4cc4044a8690ffd3ad7655e"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sky-300 underline"
+          >
+            Notion Explainer
+          </a>
+          <br></br>
+          <a
+            href="https://www.youtube.com/watch?v=XhPaX9H_xI8"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sky-300 underline"
+          >
+            Youtube Demo
+          </a>
         </div>
       </header>
 
@@ -20,11 +38,11 @@ const MainLayout = () => {
           <p>
             <a
               className="text-lime-300 hover:underline"
-              href="https://dhaliwal.dev"
+              href="https://github.com/harsimran-d"
               target="_blank"
               rel="noreferrer"
             >
-              dhaliwal-h
+              harsimran-d
             </a>
             <> </>
             &copy; {new Date().getFullYear()} Content Verification System. All

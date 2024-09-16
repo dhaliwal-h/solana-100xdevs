@@ -26,7 +26,9 @@ const ScrollableLedger = () => {
 
   return (
     <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-md">
-      <h1 className="text-xl font-semibold mb-4 text-center">Public Ledger</h1>
+      <h1 className="text-xl font-semibold mb-4 text-center">
+        Public Ledger (dummy for now)
+      </h1>
       <div className="max-h-96 overflow-y-auto">
         <ul className="divide-y divide-gray-200">
           {people.map((person, index) => (

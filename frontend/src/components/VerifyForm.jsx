@@ -30,15 +30,11 @@ const VerifyForm = () => {
     formData.append('creatorPublicKey', creatorPublicKey);
 
     try {
-      const response = await axios.post(
-        'http://localhost:5001/verify',
-        formData,
-        {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        }
-      );
+      const response = await axios.post('/api/verify', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
       console.log(response.data);
       if (response.data.isAuthentic) {
         setError(false);
